@@ -1,0 +1,10 @@
+build:
+  version: '2.0'
+
+accounts:
+  message: "Welcome to EazyBank accounts related QA APIs"
+  contactDetails:
+    name: "Jane Doe - QA Lead"
+    email: "jane@eazybank.com"
+  onCallSupport:
+    - (+91)1234567890

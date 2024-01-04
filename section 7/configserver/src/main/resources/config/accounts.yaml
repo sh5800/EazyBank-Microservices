@@ -1,0 +1,10 @@
+build:
+  version: '3.0'
+
+accounts:
+  message: "Welcome to EazyBank accounts related local APIs"
+  contactDetails:
+    name: "Shreyash Kashyap"
+    email: "shreyash@eazybank.com"
+  onCallSupport:
+    -(+91)7021544165
