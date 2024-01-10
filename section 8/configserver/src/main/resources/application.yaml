@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+#    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/sh5800/eazybank-config.git"
+          default-label: master
+          timeout: 5
+          clone-on-start: true # clone the github repo into the local system during the startup
+          force-pull: true # override all local changes whenever we start or restart the config server
+#
+#  native:
+#          search-locations: "file:///D://Java//config"
+#          search-locations: "classpath:/config"
+encrypt:
+  key: "007eadc22bf9684d548bcc3c64a2528895bb48057a68cae9e82aac6d2f1fc5ec"
+
+server:
+  port: 8071
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+#        endpoint for hookdeck = /monitor
+#        host for hookdeck = localhost
